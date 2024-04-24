@@ -1,0 +1,15 @@
+{
+  "name": "js17",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "http-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "jquery": "^3.7.1"
+  }
+}
