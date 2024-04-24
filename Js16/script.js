@@ -17,11 +17,15 @@ function Apartments() {
 function Building(maxFlat) {
     this.flats = [];
     this.maxFlat = maxFlat;
-    this.checkFlat = function(apartment) {
-        if (this.flats.length < this.maxFlat) {
-            this.flats.push(apartment);
+    this.addFlat = function(apartment) {
+        if(apartment instanceof Apartments){
+            if (this.flats.length < this.maxFlat) {
+                this.flats.push(apartment);
+            } else {
+                console.log('Лимит перевышен по квартирам')
+            }
         } else {
-            console.log('Лимит перевышен по квартирам')
+            return 'Error'
         }
     };
 }
@@ -38,7 +42,7 @@ const apartment2 = new Apartments();
 apartment2.addResident(Katya)
 
 const building = new Building(2);
-building.checkFlat(apartment);
-building.checkFlat(apartment1);
-building.checkFlat(apartment2)
+building.addFlat(apartment);
+building.addFlat(apartment1);
+building.addFlat(apartment2)
 console.log(building.flats)
