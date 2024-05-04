@@ -1,0 +1,19 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 5px;
+}
+
+.info{
+    max-width: 300px;
+}
+
+.btn-comment{
+    display: none;
+}
+
+.comment{
+    max-width: 400px;
+    margin-top: 50px;
+}
